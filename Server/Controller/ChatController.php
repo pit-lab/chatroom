@@ -1,4 +1,6 @@
 <?php
+  header('Content-type: application/json');
+  
   // ルーティング
   switch($_POST['action']) {
     case 'get' :
