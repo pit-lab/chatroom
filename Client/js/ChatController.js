@@ -1,7 +1,7 @@
 var ChatController = {
   // 初期化
   init : function () {
-    this.addPolling();
+    this.getMessage();
   },
 
   // メッセージを送信
@@ -23,14 +23,14 @@ var ChatController = {
     });
   },
 
-  // ポーリング処理
-  addPolling : function () {
+  // メッセージを受信
+  getMessage : function () {
     setInterval(function () {
       $.ajax({
         url: '../Server/Controller/ChatController.php',
         type: "POST",
         dataType: "json",
-        data: {action : 'polling'},
+        data: {action : 'get'},
         success : function(response){
           var message = $('<div>', { "class" : "col-sm-8 alert alert-warning"});
           message.append($('<p>', { "html" : response['message'] }));

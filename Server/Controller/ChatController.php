@@ -1,14 +1,14 @@
 <?php
   // ルーティング
   switch($_POST['action']) {
-    case 'polling' :
+    case 'get' :
       echo get_message();
       break;
     case 'send' :
       echo send_message();
       break;
     default :
-      // redirect 404 page 
+      // redirect 404 page
   }
 
   // 新規メッセージを取得
