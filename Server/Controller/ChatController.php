@@ -7,6 +7,8 @@
     case 'send' :
       echo send_message();
       break;
+    default :
+      // redirect 404 page 
   }
 
   // 新規メッセージを取得

@@ -23,7 +23,7 @@ var ChatController = {
     });
   },
 
-  // ロングポーリング処理
+  // ポーリング処理
   addPolling : function () {
     setInterval(function () {
       $.ajax({
